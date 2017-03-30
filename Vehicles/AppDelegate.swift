@@ -14,10 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
   
   
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-    return true
-  }
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]? = nil) -> Bool {
+        
+        var vehicle = Vehicle()
+        
+        // Test methods with implementations
+        print("Vehicle turn: \(vehicle.turn(degrees: 700))")
+        var changeGearResult = vehicle.changeGears(newGearName: "Test")
+        print("Vehicle make noise: \(changeGearResult)")
+        
+        // Test methods without implementations
+        print("Vehicle make noise: \(vehicle.makeNoise())")
+        print("Vehicle go forward: \(vehicle.goForward())")
+        print("Vehicle go backward: \(vehicle.goBackward())")
+        print("Vehicle stop moving: \(vehicle.stopMoving())")
+    
+        return true
+    }
   
   func applicationWillResignActive(_ application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

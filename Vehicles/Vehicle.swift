@@ -10,5 +10,55 @@ import Foundation
 
 class Vehicle {
     
+    // stored properties initialized with temporary dummy values.
+    var brandName = "null"
+    var modelName = "null"
+    var modelYear = 0
+    var powerSource = "null"
+    var numberOfWheels = 0
+    
+    /*
+     
+     NOTE about Initialization & Properties:
+     
+     Properties of a class must be initialized either by setting them explicitly (like above) or by initializing them in an init() method.
+     If you supply all the stored properties with values, the compiler won't require you to explicitly set them in the init() method.
+     
+     NOTE about Classes Versus Structs:
+     
+     Classes allow you to build class hierarchies and override methods. Structs are more static in nature and don't allow for this.
+     
+     */
+    
+    
+    
+    // MARK: Class Methods
+    
+    func goForward() -> String { return "null" }
+    
+    func goBackward() -> String { return "null" }
+    
+    func stopMoving() -> String { return "null" }
+    
+    func turn(degrees: Int) -> String {
+        
+        var normalizedDegrees = degrees
+        
+        // Since there are only 360 degrees in a circle, calculate what a single turn would be.
+        let degreesinACircle = 360
+        
+        if (normalizedDegrees > degreesinACircle || normalizedDegrees < degreesinACircle) {
+            // The % operator returns the remainder after dividing.
+            normalizedDegrees = normalizedDegrees % degreesinACircle
+        }
+        
+        return String(format: "Turn %d degrees.", normalizedDegrees)
+    }
+    
+    func changeGears(newGearName: String) -> String {
+        return String(format: "Put %@ into %@ gear.", self.modelName, newGearName)
+    }
+    
+    func makeNoise() -> String { return "null" }    
 }
 
