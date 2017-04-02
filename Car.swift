@@ -28,6 +28,37 @@ class Car: Vehicle {
     
     // MARK: - Private method implementations
     
+    override var vehicleDetails: String {
+        
+        // Get basic details from superclass
+        let basicDetails = super.vehicleDetails
+        
+        // Initialize mutable string
+        var carDetailsBuilder = "\n\nCar-Specific Details:\n\n"
+        
+        // String helpers for booleans
+        let yes = "Yes\n"
+        let no = "No\n"
+        
+        // add info about car-specific features.
+        carDetailsBuilder += "Has sunroof: "
+        carDetailsBuilder += hasSunroof ? yes:no
+        
+        carDetailsBuilder += "Is a convertible: "
+        carDetailsBuilder += isConvertible ? yes:no
+        
+        carDetailsBuilder += "Is a hatchback: "
+        carDetailsBuilder += isHatchback ? yes:no
+        
+        carDetailsBuilder += "Number of doors: \(numberOfDoors)"
+        
+        // Create the final string by combining basic and car-specific details
+        let carDetails = basicDetails + carDetailsBuilder
+        // the basic details are from the Vehicle base class and the carDetailsBuilder is from the code just above
+        
+        return carDetails
+    }
+    
     private func start() -> String {
         return String(format: "Start power source %@.", powerSource)
     }

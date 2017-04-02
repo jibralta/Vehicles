@@ -14,6 +14,7 @@
 		5DC89C6D19BE274D00A75324 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC89C6C19BE274D00A75324 /* Images.xcassets */; };
 		5DC89C7919BE274D00A75324 /* VehiclesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC89C7819BE274D00A75324 /* VehiclesTests.swift */; };
 		5DC89C8319BE289D00A75324 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC89C8219BE289D00A75324 /* Vehicle.swift */; };
+		E0005DDF1E91784100450429 /* Motorcycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0005DDE1E91784100450429 /* Motorcycle.swift */; };
 		E07057B11E8D54CF00AC237A /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07057B01E8D54CF00AC237A /* Car.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		5DC89C7719BE274D00A75324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DC89C7819BE274D00A75324 /* VehiclesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesTests.swift; sourceTree = "<group>"; };
 		5DC89C8219BE289D00A75324 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		E0005DDE1E91784100450429 /* Motorcycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Motorcycle.swift; path = Vehicles/Motorcycle.swift; sourceTree = "<group>"; };
 		E07057B01E8D54CF00AC237A /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +65,7 @@
 		5DC89C5519BE274D00A75324 = {
 			isa = PBXGroup;
 			children = (
-				E07057B01E8D54CF00AC237A /* Car.swift */,
+				E0005DE01E917CFA00450429 /* Data SubClasses */,
 				5DC89C6019BE274D00A75324 /* Vehicles */,
 				5DC89C7519BE274D00A75324 /* VehiclesTests */,
 				5DC89C5F19BE274D00A75324 /* Products */,
@@ -116,6 +118,15 @@
 				5DC89C7719BE274D00A75324 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0005DE01E917CFA00450429 /* Data SubClasses */ = {
+			isa = PBXGroup;
+			children = (
+				E07057B01E8D54CF00AC237A /* Car.swift */,
+				E0005DDE1E91784100450429 /* Motorcycle.swift */,
+			);
+			name = "Data SubClasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +234,7 @@
 				5DC89C6819BE274D00A75324 /* VehicleDetailViewController.swift in Sources */,
 				E07057B11E8D54CF00AC237A /* Car.swift in Sources */,
 				5DC89C6619BE274D00A75324 /* VehicleListTableViewController.swift in Sources */,
+				E0005DDF1E91784100450429 /* Motorcycle.swift in Sources */,
 				5DC89C6419BE274D00A75324 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
