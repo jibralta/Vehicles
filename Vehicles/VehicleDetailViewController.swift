@@ -49,25 +49,55 @@ class VehicleDetailViewController: UIViewController {
     configureView()
   }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let vehicle = detailVehicle {
+            print(vehicle)
+        }
+    }
     
   @IBAction func goForward(_ sender: AnyObject) {
-    // TODO: Fill this in.
-  }
+    if let vehicle = detailVehicle {
+        let controller = UIAlertController.alertControllerWithTitle(title: "Go Forward", message: vehicle.goForward())
+        present(controller, animated: true) {} // empty closure?
+        }
+    }
   
   @IBAction func goBackward(_ sender: AnyObject) {
-    // TODO: Fill this in.
-  }
+    if let vehicle = detailVehicle {
+        let controller = UIAlertController.alertControllerWithTitle(title: "Go Backward", message: vehicle.goBackward())
+        present(controller, animated: true) {}
+        }
+    
+    }
   
   @IBAction func stopMoving(_ sender: AnyObject) {
-    // TODO: Fill this in.
-  }
+    if let vehicle = detailVehicle {
+        let controller = UIAlertController.alertControllerWithTitle(title: "Stop Moving", message: vehicle.stopMoving())
+        present(controller, animated: true) {}
+    }
+    
+    }
   
   @IBAction func turn(_ sender: AnyObject) {
-    //TODO: Fill this in.
-  }
+    if let vehicle = detailVehicle {
+        let controller = UIAlertController.alertControllerWithNumberInput(title: "Turn", message: "Enter number of degrees to turn:", buttonTitle: "Go!", handler: { (integerValue) in
+            if let value = integerValue {
+                let controller = UIAlertController.alertControllerWithTitle(title: "Turn", message: vehicle.turn(degrees: value))
+                self.present(controller, animated: true, completion: nil)
+            }
+        })
+            present(controller, animated: true) {}
+    }
+}
   
   @IBAction func makeNoise(_ sender: AnyObject) {
-    // TODO: Fill this in.
-  }
+    // the if let statements make sure that the vehicle exists. 
+    // if the vehicle exists, create an alert controller
+    if let vehicle = detailVehicle {
+        let controller = UIAlertController.alertControllerWithTitle(title: "Make Some Noise!", message: vehicle.makeNoise())
+        present(controller, animated: true) {}
+        }
+    }
   
 }

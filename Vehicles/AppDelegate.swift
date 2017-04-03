@@ -16,18 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]? = nil) -> Bool {
         
-        var vehicle = Vehicle()
-        
-        // Test methods with implementations
-        print("Vehicle turn: \(vehicle.turn(degrees: 700))")
-        var changeGearResult = vehicle.changeGears(newGearName: "Test")
-        print("Vehicle make noise: \(changeGearResult)")
-        
-        // Test methods without implementations
-        print("Vehicle make noise: \(vehicle.makeNoise())")
-        print("Vehicle go forward: \(vehicle.goForward())")
-        print("Vehicle go backward: \(vehicle.goBackward())")
-        print("Vehicle stop moving: \(vehicle.stopMoving())")
+// commented block of code below no longer needed after initializing properties in the data classes.
+//        var vehicle = Vehicle()
+//        
+//        // Test methods with implementations
+//        print("Vehicle turn: \(vehicle.turn(degrees: 700))")
+//        var changeGearResult = vehicle.changeGears(newGearName: "Test")
+//        print("Vehicle make noise: \(changeGearResult)")
+//        
+//        // Test methods without implementations
+//        print("Vehicle make noise: \(vehicle.makeNoise())")
+//        print("Vehicle go forward: \(vehicle.goForward())")
+//        print("Vehicle go backward: \(vehicle.goBackward())")
+//        print("Vehicle stop moving: \(vehicle.stopMoving())")
     
         return true
     }

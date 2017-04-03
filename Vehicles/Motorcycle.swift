@@ -12,12 +12,12 @@ class Motorcyle: Vehicle {
     
     var engineNoise = ""
     
-    override init() {
-        super.init()
+    init(brandName: String, modelName: String, modelYear: Int, engineNoise: String) {
         
-        numberOfWheels = 2
-        powerSource = "gas engine"
+        self.engineNoise = engineNoise
         
+        super.init(brandName: brandName, modelName: modelName, modelYear: modelYear, powerSource: "gas engine", numberOfWheels: 2)
+        // powerSource and numberOfWheels are in the super.init because these have standard values specific to Motorycle. All motorcyles have 2 wheels and a gas engine. Other property values can change depending on the specific motorcycle.
     }
     
     // MARK: - Superclass Overrides for Actions such as goForward, etc

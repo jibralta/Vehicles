@@ -21,6 +21,14 @@ class Vehicle {
         // this is an exanple of a computed property. A fresh string is generated every timeThe others above are stored properties.
     }
     
+    init(brandName:String, modelName:String, modelYear:Int, powerSource:String, numberOfWheels:Int) {
+        self.brandName = brandName
+        self.modelName = modelName
+        self.modelYear = modelYear
+        self.powerSource = powerSource
+        self.numberOfWheels = numberOfWheels
+    }
+    
     var vehicleDetails: String {
         var details = "Basic vehicle details:\n\n"
         details += "Brand name: \(brandName)\n"
@@ -74,6 +82,17 @@ class Vehicle {
         return String(format: "Put %@ into %@ gear.", self.modelName, newGearName)
     }
     
-    func makeNoise() -> String { return "null" }    
+    func makeNoise() -> String { return "null" }
+
+    
+}
+
+// MARK: An extension to make Vehicle printable
+
+extension Vehicle: CustomStringConvertible {
+    // this adapts Vehicle to be used as a string.
+    var description: String {
+        return vehicleTitle + "\n" + vehicleDetails
+    }
 }
 

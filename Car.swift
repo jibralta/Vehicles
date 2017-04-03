@@ -10,14 +10,20 @@ import Foundation
 
 class Car: Vehicle {
     
-    var isConvertible: Bool = false
-    var isHatchback: Bool = false
-    var hasSunroof: Bool = false
-    var numberOfDoors: Int = 0
+    var isConvertible: Bool
+    var isHatchback: Bool
+    var hasSunroof: Bool
+    var numberOfDoors: Int
     
-    override init() {
-        super.init()
-        numberOfWheels = 4
+    init(brandName: String, modelName: String, modelYear: Int, powerSource: String, isConvertible: Bool, isHatchback: Bool, hasSunroof: Bool, numberOfDoors: Int) {
+        
+        self.isConvertible = isConvertible
+        self.isHatchback = isHatchback
+        self.hasSunroof = hasSunroof
+        self.numberOfDoors = numberOfDoors
+        
+        super.init(brandName: brandName, modelName: modelName, modelYear: modelYear, powerSource: powerSource, numberOfWheels: 4)
+        // numberOfwheels is 4 because all cars have 4 wheels. The other properties depend on the specific car.
     }
     
     /* NOTE: When overriding a normal method one of two things can happen -
